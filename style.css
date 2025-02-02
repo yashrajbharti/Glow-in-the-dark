@@ -131,6 +131,14 @@ svg *:not(.neon) {
   transition: opacity 3s ease;
   opacity: var(--opacity);
 }
+svg.fallback:hover {
+  & > .neon {
+    opacity: 1;
+  }
+  & > *:not(.neon) {
+    opacity: 0.2;
+  }
+}
 a {
   transition: color 0.3s ease;
   color: light-dark(var(--secondary-stroke), var(--highlight-stroke));

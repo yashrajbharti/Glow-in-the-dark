@@ -16,6 +16,7 @@ const fallback = () => {
 
 const initAmbientLightSensor = async () => {
   if (!("AmbientLightSensor" in window)) {
+    fallback();
     console.warn("Ambient Light Sensor API not supported in this browser.");
     return;
   }

@@ -9,6 +9,11 @@ const updateIlluminance = (illuminance) => {
   glowIllustration(illuminance);
 };
 
+const fallback = () => {
+  const svgEl = document.querySelector("svg");
+  svgEl.classList.add("fallback");
+};
+
 const initAmbientLightSensor = async () => {
   if (!("AmbientLightSensor" in window)) {
     console.warn("Ambient Light Sensor API not supported in this browser.");
@@ -30,11 +35,12 @@ const initAmbientLightSensor = async () => {
       updateIlluminance(sensor.illuminance)
     );
     sensor.addEventListener("error", (event) => {
+      fallback();
       console.error("Ambient Light Sensor Error:", event.error);
     });
-
     sensor.start();
   } catch (error) {
+    fallback();
     console.error("Failed to initialize Ambient Light Sensor:", error);
   }
 };

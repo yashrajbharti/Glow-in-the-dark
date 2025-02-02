@@ -12,6 +12,40 @@ This project demonstrates the **Ambient Light Sensor API**, an experimental web 
 - Displays real-time **lux readings** from the sensor.
 - Could be used for **e-commerce** applications to showcase glow-in-the-dark products dynamically.
 
+## Ambient Light Sensor API
+
+The **Ambient Light Sensor API** is an experimental web API that enables web applications to access real-time data about the surrounding light levels using a device's light sensor. This API allows websites to adapt to environmental lighting, enhancing the user experience with dynamic changes based on ambient conditions. The `AmbientLightSensor` provides readings in lux, the unit of illuminance, helping developers create context-aware experiences such as automatically adjusting brightness or activating features or effects in low-light environments.
+
+The `AmbientLightSensor` can be instantiated with optional configuration settings like the `frequency` property, which controls how often the sensor provides updates.
+
+### Code Example
+
+Here’s a simple example of how to use the `AmbientLightSensor`:
+
+```javascript
+// Create a new instance of the AmbientLightSensor
+const sensor = new AmbientLightSensor({ frequency: 1 });
+
+// Start the sensor to begin receiving updates
+sensor.start();
+
+// Add an event listener to handle sensor data
+sensor.addEventListener('reading', () => {
+  console.log(`Current ambient light level: ${sensor.illuminance} lux`);
+  if (sensor.illuminance < 10) {
+    document.body.classList.add('dark'); // Trigger dark mode if light level is low
+  } else {
+    document.body.classList.remove('dark'); // Remove dark mode if light level is sufficient
+  }
+});
+
+// Handle any errors (e.g., sensor not available)
+sensor.addEventListener('error', (event) => {
+  console.log('Error occurred:', event.error.name);
+});
+```
+In this example, the sensor is configured to update every second (`frequency: 1`). When the light level is below 10 lux, it triggers a class to apply dark mode styling.
+
 ## Live Demo
 [Check out the live version here!](https://ambient-light.glitch.me/)
 

@@ -10,7 +10,11 @@ This project demonstrates the **Ambient Light Sensor API**, an experimental web 
   - "Dead" with a neon glow effect in the dark.
 - Mimics the "glow in the dark" effect seen in hoodies and sweatshirts.
 - Displays real-time **lux readings** from the sensor.
+- As a fallback, when the API is not supported, the neon effect can happen on `:hover`.
 - Could be used for **e-commerce** applications to showcase glow-in-the-dark products dynamically.
+
+> [!NOTE]
+> With the flag enabled, one can keep the phone in a place with good light to see the "alive version" of Schrödinger's cat and a place with less light entering the sensor (usually at the top of the phone) to see the "dead effect" with a neon glow. The `sensor.illuminance` value defines the lightness of `oklch()` colors for this effect to take place.
 
 ## Ambient Light Sensor API
 

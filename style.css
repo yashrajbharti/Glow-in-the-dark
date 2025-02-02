@@ -1,0 +1,144 @@
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+:root {
+  color-scheme: light dark;
+  --background-light: oklch(98.53% 0.0247 100.59);
+  --background-dark: oklch(17.35% 0.0123 100.59);
+  --text-color-light: oklch(17.35% 0.0123 100.59);
+  --text-color-dark: oklch(98.53% 0 100.59);
+  --nav-light: oklch(95.58% 0.048 81.97);
+  --nav-dark: oklch(24.53% 0.0027 51.88);
+  --outline-color-light: oklch(73.82% 0.0038 81);
+  --outline-color-dark: oklch(33.82% 0.0038 81);
+
+  --circle-stroke: oklch(87.18% 0.035 67.34);
+  --highlight-stroke: oklch(98.53% 0 100.59);
+  --accent-color: oklch(90.29% 0.2097 142.13);
+  --secondary-fill: oklch(76.72% 0.0495 82.62);
+  --secondary-stroke: oklch(17.35% 0.0123 100.59);
+  --tertiary-color: oklch(79.58% 0.048 81.97);
+  --tertiary-fill: oklch(52.14% 0.0196 75.96);
+
+  --opacity: 1;
+  --opacity-neon: 0;
+}
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Chomsky";
+  src: url("https://cdn.glitch.global/bb8be2e3-1876-46e8-84e2-7e4c5ed78d2c/Chomsky.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 1rem;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  background-color: light-dark(var(--background-light), var(--background-dark));
+  color: light-dark(var(--text-color-light), var(--text-color-dark));
+}
+
+.box {
+  inline-size: 40px;
+  block-size: 30px;
+  outline: 1px dashed
+    light-dark(var(--outline-color-light), var(--outline-color-dark));
+  border: 1px solid
+    light-dark(var(--outline-color-light), var(--outline-color-dark));
+  outline-offset: 2px;
+}
+
+main {
+  text-align: center;
+}
+svg {
+  inline-size: 100%;
+  max-inline-size: 580px;
+  block-size: auto;
+  margin: auto;
+  transition: all 1s ease;
+}
+
+header {
+  position: fixed;
+  inset-block-end: 20px;
+  inset-inline-start: 0;
+  inline-size: 100%;
+}
+
+nav {
+  inline-size: 90%;
+  max-inline-size: 250px;
+  margin: auto;
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  background-color: light-dark(var(--nav-light), var(--nav-dark));
+  outline: 1px dashed
+    light-dark(var(--outline-color-light), var(--outline-color-dark));
+  outline-offset: 2px;
+}
+section {
+  inline-size: 100%;
+  max-inline-size: 580px;
+  transition: filter 1s ease;
+  filter: saturate(0);
+  margin-inline: auto;
+  margin-block-end: 20px;
+  background-color: light-dark(var(--nav-light), var(--nav-dark));
+  padding: 15px;
+  border-inline-start: 5px solid var(--accent-color);
+  & > p {
+    text-align: start;
+    & > mark {
+      background-color: var(--accent-color);
+    }
+  }
+}
+.illuminance {
+  font-size: 1.5rem;
+  font-family: "Chomsky", sans-serif;
+  inline-size: 10ch;
+  text-align: center;
+}
+.fill-theme {
+  fill: light-dark(var(--secondary-stroke), var(--highlight-stroke));
+}
+.path-theme {
+  stroke: light-dark(var(--tertiary-color), var(--highlight-stroke));
+}
+.neon {
+  transition: opacity 3s ease;
+  opacity: var(--opacity-neon);
+}
+svg *:not(.neon) {
+  transition: opacity 3s ease;
+  opacity: var(--opacity);
+}
+a {
+  transition: color 0.3s ease;
+  color: light-dark(var(--secondary-stroke), var(--highlight-stroke));
+}
+a:hover,
+a:visited {
+  color: light-dark(var(--tertiary-fill), var(--accent-color));
+}
+.eye {
+  transition: translate 0.2s ease;
+}

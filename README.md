@@ -83,7 +83,7 @@ Feel free to submit PRs or issues via GitHub:
 | Browser         | Support |
 |----------------|---------|
 | **Chrome**     | ✅ Requires flag (#enable-generic-sensor-extra-classes) |
-| **Edge**       | ⚠️ Partial support, requires manual enabling |
+| **Edge**       | ✅ Requires flag (#enable-generic-sensor-extra-classes) |
 | **Firefox**    | ❌ Not supported |
 | **Safari**     | ❌ Not supported |
 

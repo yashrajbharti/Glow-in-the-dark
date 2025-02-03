@@ -62,6 +62,9 @@ Since this API is **experimental**, you need to enable the flag in Chrome:
 3. Set it to **Enabled**
 4. Restart the browser
 
+> [!TIP]
+> The example also works in Edge as well as any Chromium-based browsers. To set the preferences in Edge, enable the **#enable-generic-sensor-extra-classes** flag in `edge://flags`.
+
 ### 2. Running the Project Locally
 #### Clone the repository:
 ```sh

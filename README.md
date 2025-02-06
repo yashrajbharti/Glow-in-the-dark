@@ -3,6 +3,8 @@
 ## Overview
 This project demonstrates the **Ambient Light Sensor API**, an experimental web API that allows web applications to detect ambient light levels. The API is currently behind a feature flag in Chrome and Edge.
 
+![Glow in the Dark | Cover](https://cdn.glitch.global/bb8be2e3-1876-46e8-84e2-7e4c5ed78d2c/cover.gif)
+
 ### Key Features
 - Uses the **Ambient Light Sensor API** to detect changes in light levels.
 - Displays a **Schrödinger's Cat** image with dynamic text:

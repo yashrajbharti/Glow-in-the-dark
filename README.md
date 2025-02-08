@@ -65,7 +65,7 @@ Since this API is **experimental**, you need to enable the flag in Chrome:
 4. Restart the browser
 
 > [!TIP]
-> The example also works in Edge as well as any Chromium-based browsers. To set the preferences in Edge, enable the **#enable-generic-sensor-extra-classes** flag in `edge://flags`.
+> The example also works in Edge as well as any Chromium-based browsers. To set the preferences in Edge, enable the **#enable-generic-sensor-extra-classes** flag in `about://flags`.
 
 ### 2. Running the Project Locally
 #### Clone the repository:
@@ -91,6 +91,9 @@ Feel free to submit PRs or issues via GitHub:
 | **Edge**       | ✅ Requires flag (#enable-generic-sensor-extra-classes) |
 | **Firefox**    | ❌ Not supported |
 | **Safari**     | ❌ Not supported |
+
+> [!IMPORTANT]
+> For this feature to work, your device must have an ambient light sensor hardware, which is common in phone devices but slightly rare in desktops/laptops.
 
 ## License
 This project is licensed under the **MIT License**.

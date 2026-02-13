@@ -78,9 +78,9 @@ cd Glow-in-the-dark
 #### Open in a browser:
 Simply open `index.html` in your browser after enabling the necessary Chrome flag.
 
-## Remix & Contributions
-Want to modify or experiment? Remix the project on Glitch:
-[Remix on Glitch](https://glitch.com/edit/#!/ambient-light)
+## Contributions
+Watch on Youtube:
+[Glow in the Dark | Youtube](https://youtu.be/7mTINR0n6rQ?si=AozoGXJD5M7sOeC6)
 
 ### Contributing
 Feel free to submit PRs or issues via GitHub:

@@ -1,5 +1,7 @@
 # Glow in the Dark | Ambient Light API
 
+The FIRST ever website that glows in the dark! 🌟
+
 ## Overview
 This project demonstrates the **Ambient Light Sensor API**, an experimental web API that allows web applications to detect ambient light levels. The API is currently behind a feature flag in Chrome and Edge.
 
